@@ -269,7 +269,7 @@ class DatabaseExecutor:
 def create_petrosila_config() -> DatabaseConfig:
     return DatabaseConfig(
         company_name="petrosila",
-        db_path=Path(__file__).parent / "data" / "petrosila.db",
+        db_path=Path(__file__).parent / "petrosila.db",
         table_mapping={
             "fact_table": "header_id",
             "production_table": "daily_production",
