@@ -301,7 +301,7 @@ def create_petrosila_config() -> DatabaseConfig:
 def create_alamein_config() -> DatabaseConfig:
     return DatabaseConfig(
         company_name="alamein",
-        db_path=Path(__file__).parent / "data" / "alamein_db.sqlite3",
+        db_path=Path(__file__).parent / "alamein_db.sqlite3",
         table_mapping={
             "fact_table": "header_id",
             "production_table": "daily_production",
