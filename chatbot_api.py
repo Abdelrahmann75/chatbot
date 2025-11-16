@@ -123,6 +123,7 @@ class SQLGenerator:
         
         producer_value = self.config.well_types["producer"]
         injector_value = self.config.well_types["injector"]
+        wc = self.config.well_types["wc"]
         
         prompt = f"""
 You are an expert SQL assistant for the {self.config.company_name} oil & gas database.
@@ -143,6 +144,7 @@ You are an expert SQL assistant for the {self.config.company_name} oil & gas dat
    - {water_prod}: Water production volume
    - {gas_prod}: Gas production volume
    - {run_time}: Operating hours
+   -{wc} : perctange of water over the total gross volume
 
 3. **{injection_table}**: Daily injection records.
    - {well_id}: Foreign key, links to {fact_table} (use for JOINs)
