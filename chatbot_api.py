@@ -123,7 +123,7 @@ class SQLGenerator:
         
         producer_value = self.config.well_types["producer"]
         injector_value = self.config.well_types["injector"]
-        wc = self.config.well_types["wc"]
+        wc = self.config.get_real_column_name("wc")
         
         prompt = f"""
 You are an expert SQL assistant for the {self.config.company_name} oil & gas database.
@@ -291,7 +291,8 @@ def create_petrosila_config() -> DatabaseConfig:
             "run_time": "run_time",
             "injection_rate": "inj_rate",
             "fluid_level": "nlap",
-            "pip":"pip"
+            "pip":"pip",
+            "wc":'wc'
         },
         well_types={
             "producer": "producer",
