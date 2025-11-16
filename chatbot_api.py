@@ -304,7 +304,7 @@ def create_alamein_config() -> DatabaseConfig:
         db_path=Path(__file__).parent / "alamein_db.sqlite3",
         table_mapping={
             "fact_table": "header_id",
-            "production_table": "daily_production",
+            "production_table": "chatbot_prod",
             "injection_table": "daily_injection",
             "fluid_table": "view_dfl"
         },
